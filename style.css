@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+:root {
+    --primary: #000;
+    --primary-input: #fff;
+    --background: 	#d9e1c1;
+    --dark:#94a165;
+    --light: #d9e1c1;
+    --off-white: #d3d3d3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP',sans-serif;
+    background-color: var(--background);
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.user-form {
+    width: 100%;
+    max-width: 700px;
+}
+
+.user-form input {
+    width: 100%;
+    display: block;
+    background-color: var(--dark);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.2);
+    color: var(--primary-input);
+}
+
+
+.user-form input::placeholder {
+    color: var(--off-white);
+}
+
+.user-form input:focus {
+    outline: none;
+}
+
+.card {
+    width: 80vw;
+    background-color: var(--dark);
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.2);
+    display: flex;
+    padding: 3rem;
+    margin: 0 1.5rem;
+    flex-direction: row;
+    border-radius: 50px;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 10px solid var(--light);
+    height: 150px;
+    width: 150px;
+}
+
+.user-info {
+    margin-left: 2rem;
+}
+
+.user-info h2 {
+    margin-top: 0;
+}
+
+.user-info ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 400px;
+    gap: 2rem;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.25rem;
+}
+
+.repo {
+    text-decoration: none;
+    color: var(--primary-input);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.25rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+@media(max-width: 500px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-form {
+        max-width: 400px;
+    }
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
